@@ -1,0 +1,11 @@
+FASTRTPS_DEFAULT_PROFILES_FILE=udp_buffer.xml ros2 run cpp_pubsub listener
+
+View:
+sudo sysctl -a | grep net.core.wmem_max
+Default: 212992
+
+Receiving:
+sudo sysctl -w net.core.rmem_max=12582912
+
+Sending:
+sudo sysctl -w net.core.wmem_max=12582912
